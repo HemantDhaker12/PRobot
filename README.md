@@ -257,3 +257,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 11. Acknowledgements
 - Powered by the **Heaven Hill** Automation Team.
 - Powered by the Groq Llama 3.3 AI Model group.
+
+## 12. ScreenShots
+
+<img width="1635" height="787" alt="image" src="https://github.com/user-attachments/assets/f6c30fa9-bdce-46dc-a99f-7598a9891f68" />
+
