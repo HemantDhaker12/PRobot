@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import workflowImg from './assets/workflow.png'
-import demoVideo from './assets/Demovideo.mp4'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('product') // 'product' or 'showcase'
@@ -769,15 +768,42 @@ Run \`make run\`. PostgreSQL is available on port 5432.`
 
           {/* DEMO VIDEO SECTION */}
           <section className="py-20 border-t border-slate-900 text-center">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider">Demo Video Walkthrough</h2>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-extrabold tracking-wider text-white mb-2 uppercase">
+                Watch PRobot in Action
+              </h2>
+              <div className="h-0.5 w-16 bg-purple-500 mx-auto mt-4 mb-6"></div>
+              <p className="text-sm text-slate-400 max-w-xl mx-auto mb-10 leading-relaxed">
+                See how PRobot autonomously handles webhook payloads, executes semantic duplicate checks, evaluates PR test coverage, and posts RAG-powered triage comments on GitHub in real time.
+              </p>
+
               <div className="bg-slate-900 border border-slate-850 p-4 rounded-3xl shadow-xl aspect-video overflow-hidden">
-                <video 
-                  src={demoVideo} 
-                  controls 
-                  preload="metadata"
-                  className="w-full h-full rounded-2xl object-cover"
-                />
+                <iframe 
+                  src="https://drive.google.com/file/d/1k3ewZk03e5WglU52mTDMejrSUeHVsS20/preview" 
+                  className="w-full h-full rounded-2xl border-0"
+                  allow="autoplay"
+                  allowFullScreen
+                  title="PRobot Demo Walkthrough"
+                ></iframe>
+              </div>
+
+              <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <a
+                  href="https://drive.google.com/file/d/1k3ewZk03e5WglU52mTDMejrSUeHVsS20/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-slate-900 border border-slate-850 hover:bg-slate-800 text-slate-300 text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full transition-all transform hover:-translate-y-0.5"
+                >
+                  Open Demo in New Tab
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1k3ewZk03e5WglU52mTDMejrSUeHVsS20/preview"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-purple-950/30 border border-purple-900/50 hover:bg-purple-950/50 text-purple-300 text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full transition-all flex items-center gap-2 transform hover:-translate-y-0.5"
+                >
+                  🔗 Open Fullscreen Demo
+                </a>
               </div>
             </div>
           </section>
