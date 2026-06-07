@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import workflowImg from './assets/workflow.png'
+import demoVideo from './assets/Demovideo.mp4'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('product') // 'product' or 'showcase'
@@ -283,14 +284,22 @@ Run \`make run\`. PostgreSQL is available on port 5432.`
               Showcase & About
             </button>
           </div>
-          <div>
+          <div className="flex items-center gap-3">
             <a
-              href="https://github.com"
+              href="https://github.com/HemantDhaker12/PRobot"
               target="_blank"
               rel="noreferrer"
-              className="bg-purple-950/30 border border-purple-900/50 hover:bg-purple-950/50 px-4 py-1.5 rounded-full text-xs font-semibold text-purple-300 transition-all flex items-center gap-2"
+              className="bg-purple-950/30 border border-purple-900/50 hover:bg-purple-950/50 px-3.5 py-1.5 rounded-full text-[10px] font-semibold text-purple-300 transition-all flex items-center gap-1.5"
             >
-              GitHub
+              🐙 Source Code
+            </a>
+            <a
+              href="https://github.com/HemantDhaker12/PRobot-demo"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-purple-950/30 border border-purple-900/50 hover:bg-purple-950/50 px-3.5 py-1.5 rounded-full text-[10px] font-semibold text-purple-300 transition-all flex items-center gap-1.5"
+            >
+              🚀 Demo Check
             </a>
           </div>
         </nav>
@@ -758,20 +767,17 @@ Run \`make run\`. PostgreSQL is available on port 5432.`
             </div>
           </section>
 
-          {/* DEMO VIDEO PLACEHOLDER SECTION */}
+          {/* DEMO VIDEO SECTION */}
           <section className="py-20 border-t border-slate-900 text-center">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider">Demo Video Walkthrough</h2>
-              <div className="bg-slate-900 border border-slate-850 p-4 rounded-3xl shadow-xl relative aspect-video flex flex-col justify-center items-center group cursor-pointer hover:border-purple-500/30 transition-all duration-300">
-                <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-slate-950 rounded-2xl opacity-80 flex flex-col justify-center items-center">
-                  {/* Play Button Icon */}
-                  <div className="w-16 h-16 rounded-full bg-purple-600 hover:bg-purple-700 text-white flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-all duration-300">
-                    <span className="text-2xl ml-1">▶</span>
-                  </div>
-                  <div className="text-xs font-bold text-slate-300 mt-4 tracking-widest uppercase">
-                    Watch 2-Minute Project Walkthrough
-                  </div>
-                </div>
+              <div className="bg-slate-900 border border-slate-850 p-4 rounded-3xl shadow-xl aspect-video overflow-hidden">
+                <video 
+                  src={demoVideo} 
+                  controls 
+                  preload="metadata"
+                  className="w-full h-full rounded-2xl object-cover"
+                />
               </div>
             </div>
           </section>
@@ -847,6 +853,32 @@ Run \`make run\`. PostgreSQL is available on port 5432.`
                 <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider mt-1">
                   Full Stack & AI Engineer / Automation Backend Engineer
                 </p>
+                <div className="flex flex-wrap gap-4 mt-3">
+                  <a 
+                    href="https://github.com/HemantDhaker12/" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-purple-400 hover:text-purple-300 font-bold transition-all flex items-center gap-1.5"
+                  >
+                    🐙 GitHub
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/hemant-dhaker-a95044292/" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-purple-400 hover:text-purple-300 font-bold transition-all flex items-center gap-1.5"
+                  >
+                    💼 LinkedIn
+                  </a>
+                  <a 
+                    href="https://x.com/Hemant10191" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-purple-400 hover:text-purple-300 font-bold transition-all flex items-center gap-1.5"
+                  >
+                    🐦 Twitter / X
+                  </a>
+                </div>
               </div>
               <span className="text-slate-600 text-xs">Based in India • 2026</span>
             </div>

@@ -51,3 +51,7 @@ test-results/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Video binaries
+*.mp4
+*.mov
